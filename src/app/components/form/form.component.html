@@ -1,0 +1,49 @@
+
+<div class="container w-50 ml-3">
+    <div class="input-group w-100">
+        <div class="form-group">
+            <select class="form-control" 
+                required
+                name="form"
+                [(ngModel)]="type"
+                >
+              <option  [ngValue]="'income'">Income</option>
+              <option [ngValue]="'expense'">Expense</option>
+            </select>
+        </div>
+        <div class="input-group-append">
+            <input 
+        type="text"
+        name="form"
+        placeholder="Enter description"
+        class="form-control"
+        [(ngModel)]="description"
+        required
+        ></div>
+        
+        <div class="input-group-append">
+            <input 
+        type="number"
+        name="form"
+        placeholder="Enter amount"
+        class="form-control"
+        [(ngModel)]="amount"
+        required
+        >        
+        </div>
+        <div class="input-group-append">
+            <button 
+            (click)="handleAdd()"
+            class="btn btn-primary">Add</button>
+        </div>
+        
+    
+</div>  
+</div>
+<div class="container">
+    <app-display [amount]="totAmount"></app-display>
+
+</div>
+
+
+
